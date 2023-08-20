@@ -1,3 +1,4 @@
+"use client"
 import { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
 
 type Props = ButtonHTMLAttributes<HTMLElement>;

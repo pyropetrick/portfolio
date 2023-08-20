@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  plugins: [require('@tailwindcss/forms')],
   theme: {
     extend: {
       backgroundImage: {
@@ -17,6 +18,9 @@ const config: Config = {
     fontFamily: {
       sans: "var(--font-somic)",
     },
+    translate: {
+      "center": "-50%",
+    },
     colors: {
       primary: "#263AC1",
       grey: "#E8E8E8",
@@ -26,8 +30,10 @@ const config: Config = {
       white: "#FFFFFF",
       brown: "#444444",
       blue: "#E8F5FF",
+      backdrop: "rgba(0, 0, 0, 0.40)",
+      electric: "#DC143C",
+      divide: "#DEDEDE",
     }
   },
-  plugins: [],
 }
 export default config

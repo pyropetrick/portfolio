@@ -1,4 +1,7 @@
+import dynamic from "next/dynamic";
 import { ContainedButton } from "..";
+
+const ContactForm = dynamic(() => import("../ContactForm/ContactForm"))
 
 export const Header = () => {
   return (
@@ -7,12 +10,14 @@ export const Header = () => {
         <div className="mb-3">
           <h1 className="text-4xl font-medium mb-2">Pavel Chernenko</h1>
           <h2 className="text-xl font-medium mb-2">Frontend developer</h2>
-          <h3 className="text-md text-brown">Transforming Ideas into Interactive Digital Solutions</h3>
+          <h3 className="text-md text-brown dark:text-white">
+            Transforming Ideas into Interactive Digital Solutions
+          </h3>
         </div>
         <div className="flex flex-col">
           <div className="flex space-x-4 self-start">
             <ContainedButton className="bg-primary text-white">My CV</ContainedButton>
-            <ContainedButton className="bg-primary text-white hover:bg-grey">Сontact</ContainedButton>
+            <ContactForm />
           </div>
         </div>
       </div>
