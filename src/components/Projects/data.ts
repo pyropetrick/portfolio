@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
-import testImage from "@/assets/images/Image.png";
-import { elangImage, genayImage, pixemaImage, postureImage, townsendImage } from "@/assets";
+import { elangImage, genayImage, pixemaImage, postureImage, townsendImage, phrasalImage } from "@/assets";
 
 type ProjectData = {
   title: string;
@@ -22,10 +21,10 @@ export const projectDatas: ProjectData[] = [
   {
     title: "Education elang",
     image: elangImage,
-    badges: ["React", "Next", "MobX", "2023"],
+    badges: ["React", "Next", "MobX", "Education", "2023"],
     link: "https://edu.elang.app/",
     description:
-      "Experienced middle frontend developer specializing in React, Next, and React Native. Browse through my portfolio for examples of interactive web apps, responsive websites, and mobile applications.",
+      "Built a platform for learning English through videos with subtitles, including gaming content.",
   },
   {
     title: "Genesis GPT",
@@ -33,7 +32,7 @@ export const projectDatas: ProjectData[] = [
     badges: ["React", "Next", "Open AI", "Tailwind", "2023"],
     link: "https://genai-gray.vercel.app/",
     description:
-      "Experienced middle frontend developer specializing in React, Next, and React Native. Browse through my portfolio for examples of interactive web apps, responsive websites, and mobile applications.",
+      "Created a customizable ChatGpt based on the openAI voice messaging API, including voice response playback. Collaborated with American developers to ensure flexible chat customization and version selection.",
   },
   {
     title: "Townsend platform",
@@ -41,14 +40,22 @@ export const projectDatas: ProjectData[] = [
     badges: ["React", "Redux", "2023"],
     link: "http://node.twnsnd.online:32043/",
     description:
-      "Experienced middle frontend developer specializing in React, Next, and React Native. Browse through my portfolio for examples of interactive web apps, responsive websites, and mobile applications.",
+      "Created a chatbot service for aggregating all chatbot platforms, with the ability to purchase chatbot solutions for the company.",
+  },
+  {
+    title: "Phrasal verbs",
+    image: phrasalImage,
+    link: "https://apps.apple.com/gb/app/posture-ai-medical-assistant/id1662597139",
+    badges: ["React", "React Native", "MobX", "Mobile", "Education", "2023"],
+    description:
+      "Developed a cross-platform application (iOS, Android) using Ionic, utilizing TensorFlow capabilities for body segmentation.",
   },
   {
     title: "Posture screen",
     image: postureImage,
     link: "https://apps.apple.com/gb/app/posture-ai-medical-assistant/id1662597139",
-    badges: ["React", "Ionic", "Mobile", "2023"],
+    badges: ["React", "Ionic", "Mobile", "TensorFlow", "2023"],
     description:
-      "Experienced middle frontend developer specializing in React, Next, and React Native. Browse through my portfolio for examples of interactive web apps, responsive websites, and mobile applications.",
+      "Developed a cross-platform application (iOS, Android) using Ionic, utilizing TensorFlow capabilities for body segmentation.",
   },
 ];
