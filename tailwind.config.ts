@@ -23,7 +23,9 @@ const config: Config = {
       black: "#040215",
       pale: "#909090",
       error: "#EB0D3F",
-      white: "#FFFFFF"
+      white: "#FFFFFF",
+      brown: "#444444",
+      blue: "#E8F5FF",
     }
   },
   plugins: [],

@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html>
-      <body className={`${NT_SOMIC.variable} font-sans`}>
+    <html lang="en">
+      <body className={`${NT_SOMIC.variable} font-sans container mx-auto lg:flex lg:justify-between lg:gap-4`}>
         <Header />
         {children}
       </body>
