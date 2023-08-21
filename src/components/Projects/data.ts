@@ -48,7 +48,7 @@ export const projectDatas: ProjectData[] = [
     link: "https://apps.apple.com/gb/app/phrasal-verbs-english-grammar/id1659421678",
     badges: ["React", "React Native", "MobX", "Mobile", "Education", "2023"],
     description:
-      "Developed a cross-platform application (iOS, Android) using Ionic, utilizing TensorFlow capabilities for body segmentation.",
+      "Phrasal Verbs mobile application is a game-changer in language learning. With interactive exercises, personalized study lists, and a vast library of phrasal verbs, mastering these language nuances has never been more engaging or accessible.",
   },
   {
     title: "Posture screen",
