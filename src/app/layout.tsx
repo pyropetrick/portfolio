@@ -16,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${NT_SOMIC.variable} font-sans container mx-auto lg:flex lg:justify-between lg:gap-4`}>
         <Header />
         {children}
+        <div id="modal"></div>
       </body>
     </html>
   );

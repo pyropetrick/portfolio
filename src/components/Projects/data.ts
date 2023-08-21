@@ -45,7 +45,7 @@ export const projectDatas: ProjectData[] = [
   {
     title: "Phrasal verbs",
     image: phrasalImage,
-    link: "https://apps.apple.com/gb/app/posture-ai-medical-assistant/id1662597139",
+    link: "https://apps.apple.com/gb/app/phrasal-verbs-english-grammar/id1659421678",
     badges: ["React", "React Native", "MobX", "Mobile", "Education", "2023"],
     description:
       "Developed a cross-platform application (iOS, Android) using Ionic, utilizing TensorFlow capabilities for body segmentation.",
