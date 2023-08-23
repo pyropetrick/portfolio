@@ -5,3 +5,4 @@ export * from "./ContactForm/ContactForm";
 export * from "./Header/Header";
 export * from "./Project/Project";
 export * from "./Projects/Projects";
+export * from "./Email/Email";
