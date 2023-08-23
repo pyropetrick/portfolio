@@ -5,6 +5,7 @@ import { Suspense, useEffect, useState } from "react";
 import { SubmitHandler, useController, useForm } from "react-hook-form";
 import { ContainedButton, Input } from "..";
 import FocusLock from "react-focus-lock";
+import { sendEmail } from "./service";
 
 const Portal = dynamic(() => import("../Portal/Portal"));
 
@@ -15,11 +16,15 @@ const ContactForm = () => {
   const {
     field,
     formState: { errors },
-  } = useController({ control, name: "message", rules: {required: "*Required"} });
+  } = useController({ control, name: "message", rules: { required: "*Required" } });
   const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const onSubmit: SubmitHandler<ContactFormType> = (data) => {
-    console.log(data);
+    setLoading(true);
+    sendEmail(data);
+    setLoading(false);
+    setIsVisible(false);
   };
 
   useEffect(() => {
@@ -58,6 +63,7 @@ const ContactForm = () => {
                     label="name"
                     control={control}
                     name="name"
+                    disabled={loading}
                   />
                   <Input
                     placeholder="email@gmail.com"
@@ -65,6 +71,7 @@ const ContactForm = () => {
                     label="email"
                     control={control}
                     name="email"
+                    disabled={loading}
                   />
                   <label className="flex flex-col capitalize">
                     Message
@@ -73,12 +80,17 @@ const ContactForm = () => {
                       onChange={field.onChange}
                       className="form-textarea rounded-lg text-black mt-2 h-20"
                       maxLength={150}
+                      disabled={loading}
                     />
                     {errors?.message && <p className="text-error">{errors.message.message}</p>}
                   </label>
                 </div>
-                <ContainedButton type="submit" className="dark:bg-white dark:text-primary py-3">
-                  Submit
+                <ContainedButton
+                  disabled={loading}
+                  type="submit"
+                  className="dark:bg-white dark:text-primary py-3"
+                >
+                  {loading ? "Submit" : "Loading..."}
                 </ContainedButton>
                 <div className="border-t border-divide pt-3 flex flex-col items-center">
                   <p className="text-sm font-medium mb-2">или свяжитесь через</p>
